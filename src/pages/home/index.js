@@ -21,7 +21,10 @@ function Home() {
       }),
     };
 
-    setStudents([newStudent]);
+    {
+      /*imutabilidade: o conteudo não deve ser alterado e sim substituído*/
+    }
+    setStudents((prevState) => [...prevState, newStudent]);
   }
 
   return (
@@ -41,7 +44,7 @@ function Home() {
       {/* componente "Card", passando como parametro name e time */}
 
       {students.map((student) => (
-        <Card name={student.name} time={student.time} />
+        <Card key={student.time} name={student.name} time={student.time} />
       ))}
     </div>
   );
