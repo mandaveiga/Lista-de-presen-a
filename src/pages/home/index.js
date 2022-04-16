@@ -4,11 +4,10 @@ import "./styles.css";
 import { Card } from "../../components/Card";
 
 function Home() {
-  {
-    /* 
+  /* 
     estado tem duas posições: onde irá armazenar o elemento e qual a função que atualiza o estado
  */
-  }
+
   const [studentName, setStudentName] = useState();
   const [students, setStudents] = useState([]);
 
@@ -21,9 +20,8 @@ function Home() {
       }),
     };
 
-    {
-      /*imutabilidade: o conteudo não deve ser alterado e sim substituído*/
-    }
+    /*imutabilidade: o conteudo não deve ser alterado e sim substituído*/
+
     setStudents((prevState) => [...prevState, newStudent]);
   }
 
